@@ -7,9 +7,21 @@
     Shell.FlyoutBehavior="Disabled"
     Title="PadillaGExamenP3">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Registrar"
+            Icon="register.png"
+            ContentTemplate="{DataTemplate views:RegisterPage}" />
+
+        <ShellContent
+            Title="Clientes"
+            Icon="clients.png"
+            ContentTemplate="{DataTemplate views:ClientsListPage}" />
+
+        <ShellContent
+            Title="Logs"
+            Icon="logs.png"
+            ContentTemplate="{DataTemplate views:LogsPage}" />
+    </TabBar>
 
 </Shell>
