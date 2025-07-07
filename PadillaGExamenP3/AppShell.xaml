@@ -3,7 +3,7 @@
     x:Class="PadillaGExamenP3.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:PadillaGExamenP3"
+    xmlns:views="clr-namespace:PadillaGExamenP3.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="PadillaGExamenP3">
 
@@ -11,17 +11,17 @@
         <ShellContent
             Title="Registrar"
             Icon="register.png"
-            ContentTemplate="{DataTemplate views:RegisterPage}" />
+            ContentTemplate="{DataTemplate views:Registro}" />
 
         <ShellContent
             Title="Clientes"
             Icon="clients.png"
-            ContentTemplate="{DataTemplate views:ClientsListPage}" />
+            ContentTemplate="{DataTemplate views:ListaClientes}" />
 
         <ShellContent
             Title="Logs"
             Icon="logs.png"
-            ContentTemplate="{DataTemplate views:LogsPage}" />
+            ContentTemplate="{DataTemplate views:Logs}" />
     </TabBar>
 
 </Shell>
