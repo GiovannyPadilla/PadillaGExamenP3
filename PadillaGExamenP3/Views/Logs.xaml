@@ -3,10 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PadillaGExamenP3.Views.Logs"
              Title="Logs">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <Label x:Name="LogsLabel"
+               Padding="10"
+               FontSize="14" />
+    </ScrollView>
 </ContentPage>

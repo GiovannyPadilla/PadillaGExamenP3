@@ -16,5 +16,7 @@ namespace PadillaGExamenP3
 
             MainPage = new AppShell();
         }
+
+        
     }
 }
