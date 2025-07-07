@@ -11,11 +11,8 @@ namespace PadillaGExamenP3.Data
     {
         readonly SQLiteAsyncConnection _database;
 
-        public ClienteDatabase()
+        public ClienteDatabase(string dbPath)
         {
-            // Crear ruta de la base de datos en la carpeta de la app
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "clientes.db3");
-
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Cliente>().Wait();
         }

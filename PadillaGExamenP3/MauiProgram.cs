@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
+using Microsoft.Extensions.Logging;
+using PadillaGExamenP3.Data;
 
 namespace PadillaGExamenP3
 {
     public static class MauiProgram
     {
+        public static ClienteDatabase Database { get; private set; }
+
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
@@ -18,6 +22,8 @@ namespace PadillaGExamenP3
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "clientes.db3");
+            Database = new ClienteDatabase(dbPath);
 
             return builder.Build();
         }
